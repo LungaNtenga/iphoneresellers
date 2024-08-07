@@ -1,0 +1,312 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ccc;
+    border-color: #ccc;
+}
+
+.hero {
+    position: relative;
+    background-image: url('Images/Best iphones till date.jpeg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1, .hero button, p {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.email-input,
+.action-button {
+    height: 40px; /* Ensure both elements are the same height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.email-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+    font-size: 16px;
+    width: 300px; /* Adjust width as needed */
+    outline: none;
+    z-index: 1;
+}
+
+.email-input:focus {
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.action-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+    background-color:#333 ;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px; /* Adjust width as needed to match input width */
+}
+
+.action-button:hover {
+    background-color: gold;
+}
+
+.features {
+    padding: 20px;
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.features li {
+    margin-bottom: 10px;
+}
+
+.features i {
+    color: #333;
+    margin-right: 10px;
+}
+
+.products {
+    padding: 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.filter {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter label {
+    font-size: 1rem;
+    color: #333;
+}
+
+#filterSelect {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+#productList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.iphone {
+    margin: 20px;
+    width: 200px;
+    text-align: center;
+    display: none;
+}
+
+.iphone img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.iphone h3 {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+}
+
+.iphone p {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.iphone button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.iphone button:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust this value to increase or decrease spacing */
+    color: gold;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        height: 300px; /* Reduced height for mobile */
+    }
+
+    .hero h1 {
+        font-size: 1.75rem; /* Adjust font size for smaller screens */
+        margin-bottom: 15px;
+    }
+
+    .hero button {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Adjust button font size */
+    }
+
+    .products h2 {
+        font-size: 1.5rem; /* Adjust font size for headings */
+    }
+
+    .filter {
+        margin-bottom: 10px;
+    }
+
+    .filter label {
+        font-size: 0.875rem;
+    }
+
+    #filterSelect {
+        margin-left: 5px;
+        padding: 3px;
+        font-size: 0.875rem;
+    }
+
+    #productList {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iphone {
+        width: 100%;
+        max-width: 300px; /* Limit max width for better fit */
+        margin: 10px 0; /* Adjust margins */
+
+    }
+       .input-container {
+        flex-direction: column; /* Stack the input and button vertically */
+    }
+
+    .email-input,
+    .action-button {
+        width: 100%; /* Full width on small screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+
+    .action-button {
+        margin-top: 10px; /* Add space between input and button */
+        border-radius: 5px; /* Rounded corners all around */
+    }
+    #productList img {
+        border-radius: 8px;
+        width: 100%; /* Make the image responsive */
+        height: auto;
+    }
+}
