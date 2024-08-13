@@ -349,4 +349,7 @@ footer {
         color: #721c24;
         z-index: 3;
     }
+    .top{
+        font-size: 40px;
+    }
 }
